@@ -257,9 +257,13 @@ Ballroom    	    0.74
 ## Q7
 ### IDEA
 針對音樂上這樣[複節拍（polymeter）](https://zh.wikipedia.org/wiki/节拍#复节拍（混合节拍）)，又或是會被俗稱「變態拍」這部分，設計演算法上最重要應該在於掌握它的動態變化。
+
 而首先前處理上，可以參考mireval官方library中的文件有提到，利用“*mireval.beat.trimbeats*”作為data preprocessing去除音樂前五秒的片段以利提升資料的正確性。
+
 此外，適當的去除開頭的「弱起拍」節奏，以及消除尾巴不完整的小節拍數，將可有效從正確位置上開始被偵測到正確結束。
+
 再者，必須分析tempogram中onset的downbeat時間點，例如[0, 3, 7 ,10]並假設抓到的結尾時間點為[15]，如此一來我們將可以將list中相鄰位置相減，得到[3, 4, 3, 5]這樣的動態beats_per_bar的變化關係。
+
 最後配合madmom中的*madmom.features.DBNDownBeatTrackingProcessor(beatsperbar=beatperbar, fps=100)* 餵入預測。
 
 ---
