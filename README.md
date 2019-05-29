@@ -1,13 +1,10 @@
 # MIR_HW2
 # Outline
+* [Task 1: tempo estimation](#01)
+* [Task 2: using dynamic programming for beat tracking](#02)
+* [Task 3: meter recognition](#03)
 
-Task 1: tempo estimation
-
-Task 2: using dynamic programming for beat tracking
-
-Task 3: meter recognition
-
-# Task 1: tempo estimation
+<h3 id="01">Task 1: tempo estimation</h3>
 ## Q1
 * 說明：
 在Ballroom這套dataset中，由於整體的資料集都偏向於「舞曲」的形式，故大體上來說在tempo上的預測是不錯的。
@@ -167,9 +164,7 @@ Overall P-score:	0.60
 Overall ALOTC score:	0.96
 ```
 
-
-# Task 2: using dynamic programming for beat tracking
-
+<h3 id="02">Task 2: using dynamic programming for beat tracking</h3>
 ## Q4
 * 說明：
 *mireval.beat* 在協助F score的運算上有莫大幫忙，也能支持與ground truth資料的0.07秒緩衝容錯，真的必須大力推崇。
@@ -252,8 +247,7 @@ Database          F-score
 JCS         	    0.72
 Ballroom    	    0.74
 ```
-
-# Task 3: meter recognition
+<h3 id="03">Task 3: meter recognition</h3>
 ## Q7
 ### IDEA
 針對音樂上這樣[複節拍（polymeter）](https://zh.wikipedia.org/wiki/节拍#复节拍（混合节拍）)，又或是會被俗稱「變態拍」這部分，設計演算法上最重要應該在於掌握它的動態變化。
