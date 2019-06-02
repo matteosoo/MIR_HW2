@@ -150,6 +150,7 @@ Overall ALOTC score:	0.00
 ```
 
 <h3 id="013">Q3</h3>
+
 * 說明：
 這邊使用MADMOM這個library作tempo預測，其中的*madmom.features.tempo.TempoEstimationProcessor*可以利於抓出一連串由高至低可能的tempo, 再同樣透過只抓取前兩名的tempo預測結果，作兩種score的運算。
 而madmom藉由RNN的神經網路運算強化，使它目前在結果上，比起librosa的運算結果還要來的更佳。
@@ -209,6 +210,7 @@ Quickstep    	    0.55
 Overall F-score:	0.66
 ```
 <h3 id="025">Q5</h3>
+
 * 說明：
 Ballroom 與以下兩個datasets相較來說結果較佳，最大原因應該還是在於它的資料集本身是以「舞曲」為主。
 SMC 應該是相較難的資料集，因為它當中的音樂多半是古典音樂、抒情歌..等，旋律線條大過於節奏性的音樂，所以很容易被旋律線拉著跑。
@@ -225,6 +227,7 @@ SMC          	    0.36
 JCS          	    0.63
 ```
 <h3 id="026">Q6</h3>
+
 * 說明：
 Madmom作為目前最佳結果表現之一的library，約莫可相較前面Q4, Q5 提升0.15~0.20的F score表現。
 
